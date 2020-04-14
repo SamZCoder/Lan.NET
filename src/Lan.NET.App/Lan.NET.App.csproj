@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\IPScannerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IPScannerForm.Designer.cs">
+      <DependentUpon>IPScannerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\IPScannerForm.resx">
+      <DependentUpon>IPScannerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -65,7 +74,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\Lan.NET.Domain.IPScanResult.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +89,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lan.NET.Domain\Lan.NET.Domain.csproj">
+      <Project>{67ED036E-5A21-40A3-82EA-13AC9ED1C88E}</Project>
+      <Name>Lan.NET.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lan.NET.Network\Lan.NET.Network.csproj">
+      <Project>{7D3171EF-FCFC-45D9-9E17-CA3ADBBE73AC}</Project>
+      <Name>Lan.NET.Network</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Offline-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Online-Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

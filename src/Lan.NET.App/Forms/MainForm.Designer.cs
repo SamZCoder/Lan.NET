@@ -73,15 +73,16 @@
             this.networkScannerToolStripMenuItem.Name = "networkScannerToolStripMenuItem";
             this.networkScannerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.networkScannerToolStripMenuItem.Text = "Network Scanner";
+            this.networkScannerToolStripMenuItem.Click += new System.EventHandler(this.networkScannerToolStripMenuItem_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(781, 399);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Lan.NET";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

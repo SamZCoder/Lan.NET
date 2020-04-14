@@ -16,5 +16,10 @@ namespace Lan.NET.App.Forms
         {
             InitializeComponent();
         }
+
+        private void networkScannerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (new IPScannerForm()).Show();
+        }
     }
 }
